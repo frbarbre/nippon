@@ -26,7 +26,6 @@ const payment = [
 
 function goToPayVisa() {
 	window.location.href = "payment-visa.html";
-	console.log("eat shit")
 }
 
 const paymentMaker = () => {
