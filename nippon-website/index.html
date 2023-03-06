@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover"/>
+    <meta name="theme-color" content="#FFFEFC" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nippon</title>
+    <link rel="shortcut icon" href="img/nippon-logo.png" type="image/x-icon" />
+    <script src="js/recipeGeneratorFP.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header-main">
+      <div class="header-wrapper">
+        <figure class="mobile-nav hamburger-none animate__bounceIn" id="btn" onclick="navOpener(), navAnimator()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </figure>
+        <a href="index.html"><img class="animate__bounceIn main-logo" src="img/nippon-logo.png" alt="nippon-logo"/></a>
+        <img class="animate__bounceIn" src="img/login.png" alt="login-btn" onclick="loginBtn()" />
+      </div>
+      <aside class="nav-menu">
+        <nav>
+          <div class="nav-wrapper">
+            <div><a href="dinners.html">Måltider</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Sådan fungerer det</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Min konto</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Kontakt</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Kurv</a></div>
+          </div>
+        </nav>
+        <div class="spacer" onclick="navOpener(), navAnimator()"></div>
+      </aside>
+    </header>
+    <div class="hero-wrapper">
+      <video autoplay muted playsinline loop src="video/nippon.mp4"></video>
+      <div class="divider-wrapper">
+        <a href="#pop-dish-bookmark"
+          ><img
+            class="animate__bounce infinite"
+            src="img/arrow-down-bold.png"
+            alt=""
+        /></a>
+        <img class="video-divider" src="img/divider-mobile.svg" alt="" />
+      </div>
+      <div class="hero-content-wrapper">
+        <article>
+          <h2>Forkæl dine smagsløg med</h2>
+          <h1><strong>Japanske</strong> måltidskasser</h1>
+          <a class="std-btn btn-red" href="survey.html">Bestil nu</a>
+        </article>
+      </div>
+    </div>
+    <div id="pop-dish-bookmark"></div>
+    <section class="pop-dishes">
+      <h2 class="std-h2"><strong>Populære</strong> måltider</h2>
+      <div class="pop-wrapper">
+        <div class="widget-wrapper" id="pop-dish-list">
+        </div>
+        <a href="dinners.html" class="std-btn btn-red from-bottom fade-in">Vis alle</a>
+      </div>
+    </section>
+    <div class="footer-wrapper translateY">
+        <div class="wave-wrapper"><img src="img/wave.png" alt=""></div>
+        <div class="blue-divider-wrapper">
+           <img src="img/divider-mobile-blue.svg" alt=""> 
+        </div>
+        <footer>
+          <article>
+            <h3>Kontakt</h3>
+            <p>Nippon a/s</p>
+            <p>Uranvej 7</p>
+            <p>1986 Chernobyl</p>
+            <p>Tlf. +45 88 88 88 88</p>
+        </article>
+        <div class="some-icons">
+            <img src="img/face.png" alt="">
+            <img src="img/insta.png" alt="">
+        </div>
+        <img src="img/nippon-logo-white.png" alt="nippon-logo">
+        </footer>
+    </div>
+  </body>
+</html>

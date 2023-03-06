@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="da" class="overflow-bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover"/>
+    <meta name="theme-color" content="#FFFEFC" />
+    <link rel="stylesheet" href="css/style-payment.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nippon</title>
+    <link rel="shortcut icon" href="img/nippon-logo.png" type="image/x-icon" />
+    <script src="js/payment.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header-main">
+      <div class="header-wrapper">
+        <figure class="mobile-nav hamburger-none animate__bounceIn" id="btn" onclick="navOpener(), navAnimator()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </figure>
+        <a href="index.html"><img class="animate__bounceIn main-logo" src="img/nippon-logo.png" alt="nippon-logo"/></a>
+        <img class="animate__bounceIn" src="img/login.png" alt="login-btn" onclick="loginBtn()"/>
+      </div>
+      <aside class="nav-menu">
+        <nav>
+          <div class="nav-wrapper">
+            <div><a href="dinners.html">Måltider</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Sådan fungerer det</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Min konto</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Kontakt</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Kurv</a></div>
+          </div>
+        </nav>
+        <div class="spacer" onclick="navOpener(), navAnimator()"></div>
+      </aside>
+    </header>
+    <div class="header-spacer"></div>
+    <h2 class="padding-h2 std-h2">Betaling</h2>
+    <div class="container" style="padding-top: 33px;">
+
+        <div class="card-container">
+
+            <div class="front">
+                <div class="image">
+                    <img src="img/chip.png" alt="d">
+                    <img src="img/visa-white.png" alt="d">
+                </div>
+                <div class="card-number-box">#### #### #### ####</div>
+                <div class="flexbox">
+                    <div class="box">
+                        <strong>Kortholder</strong>
+                        <div class="card-holder-name">Fulde Navn</div>
+                    </div>
+                    <div class="box">
+                        <strong>Gyldigt til</strong>
+                        <div class="expiration">
+                            <strong class="exp-month">MM</strong>
+                            <strong class="exp-year">YY</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="stripe"></div>
+                <div class="box">
+                    <strong style="color: var(--white);">CVV</strong>
+                    <div class="cvv-box"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <form action="order-confirmation.html">
+            <div class="inputBox">
+                <strong>Kortnummer:</strong>
+                <input type="text" class="card-number-input" maxlength="20" placeholder="Kortnummer" id="card-number-input" required>
+            </div>
+            <div class="inputBox">
+                <strong>Navn på kortet:</strong>
+                <input type="text" class="card-holder-input" placeholder="Fulde navn" required>
+            </div>
+            <div class="flexbox">
+                <div class="inputBox">
+                    <strong>Gyldigt til:</strong>
+                    <select class="month-input" required>
+                        <option value="" selected disabled>MM</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <strong class="hidden">Hidden</strong>
+                    <select class="year-input" required>
+                        <option value="" selected disabled>YY</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <strong>CVV:</strong>
+                    <input type="text" maxlength="3" class="cvv-input" placeholder="Kontrolcifre" required>
+                </div>
+            </div>
+            <div class="flexbox">
+                <input type="submit" value="Betal" class="submit-btn">
+            </div>
+        </form>
+
+    </div>
+        <div class="footer-wrapper noTranslateY">
+            <div class="wave-wrapper"><img src="img/wave.png" alt=""></div>
+            <div class="blue-divider-wrapper">
+               <img src="img/divider-mobile-blue.svg" alt=""> 
+            </div>
+            <footer>
+              <article>
+                <h3>Kontakt</h3>
+                <p>Nippon a/s</p>
+                <p>Uranvej 7</p>
+                <p>1986 Chernobyl</p>
+                <p>Tlf. +45 88 88 88 88</p>
+            </article>
+            <div class="some-icons">
+                <img src="img/face.png" alt="">
+                <img src="img/insta.png" alt="">
+            </div>
+            <img src="img/nippon-logo-white.png" alt="nippon-logo">
+            </footer>
+        </div>
+  </body>
+</html>

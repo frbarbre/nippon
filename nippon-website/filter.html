@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover"/>
+    <meta name="theme-color" content="#FFFEFC" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nippon</title>
+    <link rel="shortcut icon" href="img/nippon-logo.png" type="image/x-icon" />
+    <script src="js/filter.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body onclick="filterPriceLoad()" onload="filterPriceLoad(), filterReciptSaver()">
+    <header class="header-main">
+      <div class="header-wrapper">
+        <figure class="mobile-nav hamburger-none animate__bounceIn" id="btn" onclick="navOpener(), navAnimator()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </figure>
+        <a href="index.html"><img class="animate__bounceIn main-logo" src="img/nippon-logo.png" alt="nippon-logo"/></a>
+        <img class="animate__bounceIn" src="img/login.png" alt="login-btn" onclick="loginBtn()"/>
+      </div>
+      <aside class="nav-menu">
+        <nav>
+          <div class="nav-wrapper">
+            <div><a href="dinners.html">Måltider</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Sådan fungerer det</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Min konto</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Kontakt</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Kurv</a></div>
+          </div>
+        </nav>
+        <div class="spacer" onclick="navOpener(), navAnimator()"></div>
+      </aside>
+    </header>
+    <div class="header-spacer"></div>
+    <h2 class="std-h2 padding-h2" id="filter-heading" onclick="setAmount()">Vælg <strong>-</strong> måltider</h2>
+    <div class="filter-menu">
+        <form class="search-container">
+            <input type="text" id="search-bar" onfocus="stillInAlpha()" placeholder="Søg efter ingrediens...">
+            <a class="search-icon"><img src="img/search.png"></a>
+          </form>
+          <div class="filter-icon"><img src="img/filter.png" alt=""><div>Filtrér</div></div>
+          <div id="myBtnContainer" class="filter-btn-container">
+            <button class="btn active" onclick="filterSelection('all')"><div>Vis alle</div></button>
+            <button class="btn" onclick="filterSelection('lactose')"><img src="img/laktose-simple.png"><div>Laktosefri</div></button>
+            <button class="btn" onclick="filterSelection('veggie')"><img src="img/veggie-simple.png"><div>Vegetar</div></button>
+            <button class="btn" onclick="filterSelection('vegan')"><img src="img/vegan-simple.png"><div>Vegansk</div></button>
+            <button class="btn" onclick="filterSelection('fish')"><img src="img/fisk-simple.png"><div>Fisk</div></button>
+            <button class="btn" onclick="filterSelection('gluten')"><img src="img/gluten-simple.png"><div>Glutenfri</div></button>
+          </div>	
+    </div>
+    <div class="filter-dish-wrapper widget-wrapper" id="list">
+      <figure class="pop-widget filter-widget from-bottom fade-in filterDiv ${icon.catagory}">
+    </div>
+    <div class="alert-message-wrapper"><div class="alert-message-container"><div class="alert-text">Hej med jer</div><div id="icon-holder" class="checkmark-icon remove-icon"><div class="icon-holder"></div></div></div></div>
+    <div class="header-spacer"></div>
+    <div class="header-spacer"></div>
+    <header class="bottom-header">
+        <div class="btm-header-wrapper">
+            <div><h6>Total: </h6><h5 id="filter-price">0 kr.</h5></div>
+            <a class="std-btn btn-red" onclick="filterAmountCheck()">Fortsæt</a>
+            <div onclick="filterRecipt()"><img src="img/arrow-down-bold.png" alt=""></div>
+            <!-- empty div for gradient -->
+            <div></div>
+            <div class="recipt-content-wrapper">
+              <div class="recipt-content">
+                <h2 class="std-h2">Kurv:</h2>
+                <div class="recipt-container" id="recipt">
+                  <div hidden class="choosenItem ramenItem"><div class="choosenItem-flex"><div>Ramen <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem sushiItem"><div class="choosenItem-flex"><div>Sushi <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem udonItem"><div class="choosenItem-flex"><div>Udonsuppe <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem pumpkinItem"><div class="choosenItem-flex"><div>Græskarsup. <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem gyozaItem"><div class="choosenItem-flex"><div>Gyoza <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem ponzuItem"><div class="choosenItem-flex"><div>Ponzu Frik. <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem tonkatsuItem"><div class="choosenItem-flex"><div>Tonkatsu <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem yakitoriItem"><div class="choosenItem-flex"><div>Yakitori <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem tempuraItem"><div class="choosenItem-flex"><div>Tempura Nu. <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem okonomiyakiItem"><div class="choosenItem-flex"><div>Okonomiyaki <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem yakisobaItem"><div class="choosenItem-flex"><div>Yakisoba <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem tamagoyakiItem"><div class="choosenItem-flex"><div>Tamagoyaki <strong class="filter-person"></strong></div><div class="filter-price-tag">3x 40 kr.</div></div></div>
+                  <div hidden class="choosenItem shippingItem"><div class="choosenItem-flex"><div>Fragt </div><div><strong>30 kr.</strong></div></div></div>
+                  <div hidden class="choosenItem totalItem"><div class="choosenItem-flex"><div>I alt </div><div><strong class="filter-sum">30 kr.</strong></div></div></div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </header>
+  </body>
+</html>

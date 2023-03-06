@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover"/>
+    <meta name="theme-color" content="#FFFEFC" />
+    <link rel="stylesheet" href="css/style-payment.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Nippon</title>
+    <link rel="shortcut icon" href="img/nippon-logo.png" type="image/x-icon" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body onload="subtotalPriceLoad()">
+    <header class="header-main">
+      <div class="header-wrapper">
+        <figure class="mobile-nav hamburger-none animate__bounceIn" id="btn" onclick="navOpener(), navAnimator()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </figure>
+        <a href="index.html"><img class="animate__bounceIn main-logo" src="img/nippon-logo.png" alt="nippon-logo"/></a>
+        <img class="animate__bounceIn" src="img/login.png" alt="login-btn" onclick="loginBtn()"/>
+      </div>
+      <aside class="nav-menu">
+        <nav>
+          <div class="nav-wrapper">
+            <div><a href="dinners.html">Måltider</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Sådan fungerer det</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Min konto</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Kontakt</a></div>
+            <img src="img/line.png" alt="" />
+            <div><a href="#">Kurv</a></div>
+          </div>
+        </nav>
+        <div class="spacer" onclick="navOpener(), navAnimator()"></div>
+      </aside>
+    </header>
+    <div class="header-spacer"></div>
+    <h2 class="padding-h2 std-h2">Subtotal</h2>
+    <div class="animation-wrapper">
+      <div class="sub-total-wrapper">
+        <div class="sub-total-container">
+            <h1 id="subtotal-price">420 kr.</h1>
+            <img class="empty-line" src="img/line.png">
+            <img src="img/line.png">
+            <article><h5 id="subtotal-person">Måltider (4 pers.)</h5><h6 id="subtotal-dinner">3x 130 kr.</h6></article>
+            <img src="img/line.png">
+            <article><h5>Fragt</h5><h6>30 kr.</h6></article>
+            <img class="empty-line" src="img/line.png">
+            <img class="empty-line" src="img/line.png">
+            <img class="empty-line" src="img/line.png">
+            <img class="empty-line" src="img/line.png">
+            <img class="empty-line" src="img/line.png">
+            <img class="empty-line" src="img/line.png">
+            <img class="empty-line" src="img/line.png">
+            <img class="empty-line" src="img/line.png">
+        </div>
+    </div>
+    </div>
+    <div class="header-spacer"></div>
+    <header class="bottom-header">
+        <div class="btm-header-wrapper subtotal-header"> 
+            <a class="std-btn btn-red" href="login.html">Fortsæt</a>
+        </div>
+    </header>
+  </body>
+</html>
